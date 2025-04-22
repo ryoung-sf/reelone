@@ -22,9 +22,12 @@
     <%= javascript_importmap_tags %>
   </head>
 
-  <body>
-    <main class="container mx-auto mt-28 px-5 flex">
-      <%= yield %>
+  <body class="overscroll-none">
+    <main class="mx-auto relative">
+      <%= render "shared/navbar" %>
+      <div class="container flex flex-col items-center min-h-screen bg-stone-100">
+        <%= yield %>
+      </div>
     </main>
   </body>
 </html>
